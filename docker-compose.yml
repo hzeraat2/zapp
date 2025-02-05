@@ -1,0 +1,23 @@
+# Note: for now I am using Postgres App installed on Mac
+# In the future we can Dockerize the DB and implement this file
+version: "3"
+services:
+  postgres:
+    image: postgres:alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB : pg_db
+    volumes:
+      - /data/piz_reaction_db:/docker-entrypoint-initdb.d/
+    networks:
+      - overlay
+    ports:
+      -5430:5430
+    command: -p 5430
+
+  volumes:
+    postgres-db
+  
+  networks:
+    overlay:
