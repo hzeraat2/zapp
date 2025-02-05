@@ -1,3 +1,31 @@
+# Database
+
+to start the app, install a Postgres app. Then adjust the username and password of the database and make sure the Postgres app is up and running before starting the Backend service
+
+# Backend
+From the root directly of Zapp run the following commands:
+
+```bash
+npm i
+npm start
+```
+
+# Frontend
+
+The UI for this app is written in React.
+
+Run the following commands to get the UI up and running:
+
+```bash
+cd ui
+npm i
+npm start
+```
+
+
+---------------------------
+
+
 # Zapp Coding Test
 
 We’ve got some data in a CSV file and we want to transfer it over to a database and add validation and checks to any changes made to the data. We should be able to add/edit/delete any rows added.
